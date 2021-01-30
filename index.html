@@ -190,6 +190,7 @@
   el.menu.addEventListener("click", (e) => {
     //e.preventDefault();
     if (e.target.classList.contains("toggle-submenu")) {
+      e.preventDefault();
       const parent = e.target.parentNode;
       const submenu = parent.childNodes[3];
 
@@ -202,6 +203,7 @@
         submenu.classList.add("show");
       }
     } else if (e.target.classList.contains("fa-plus")) {
+      e.preventDefault();
       const parent = e.target.parentNode.parentNode;
       const submenu = parent.childNodes[3];
 
